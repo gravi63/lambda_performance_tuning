@@ -1,7 +1,7 @@
 
 # Postman Load Testing 
 
-This is another way to load test your microservice and get performance info. This one can be use irrespective of whether it’s serverless or not (Power tuning above is just for Lambda). This also creates very nice graphs for Linkedin Screenshots ;)
+This is another way to load test your microservice and get performance info. This one can be use irrespective of whether it’s serverless or not (Power tuning above is just for Lambda).
 
 Make sure you have the latest Postman app https://www.postman.com/downloads/ 
 Under Collections, click “+”
