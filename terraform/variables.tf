@@ -15,8 +15,8 @@ variable "lambda_functions" {
 
   default = {
     "DDBCreateRecord" = {
-      source_file = "lambda_function.py"
-      handler     = "lambda_function.lambda_handler"
+      source_file = "ddb_create_record.py"
+      handler     = "ddb_create_record.lambda_handler"
     }
     "DDBUpdateRecord" = {
       source_file = "ddb_update_record.py"
@@ -43,5 +43,5 @@ variable "lambda_functions" {
 variable "lambda_source_dir" {
   description = "Directory containing the individual .py files referenced in lambda_functions"
   type        = string
-  default     = "${path.module}/lambda_src"
+  default     = "./lambda_src"
 }

@@ -1,5 +1,7 @@
 # Local .terraform directories
 .terraform/
+hashicorp/
+builds/
 
 # .tfstate files
 *.tfstate

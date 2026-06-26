@@ -15,12 +15,12 @@ output "lambda_invoke_arns" {
 
 output "dynamodb_table_name" {
   description = "Name of the DynamoDB table"
-  value       = aws_dynamodb_table.lambda_apigateway.name
+  value       = aws_dynamodb_table.ddb_table.name
 }
 
 output "dynamodb_table_arn" {
   description = "ARN of the DynamoDB table"
-  value       = aws_dynamodb_table.lambda_apigateway.arn
+  value       = aws_dynamodb_table.ddb_table.arn
 }
 
 output "api_invoke_url" {
