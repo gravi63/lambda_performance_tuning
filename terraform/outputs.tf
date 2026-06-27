@@ -24,6 +24,6 @@ output "dynamodb_table_arn" {
 }
 
 output "api_invoke_url" {
-  description = "Invoke URL for the dynamodbmanager resource on the Prod stage"
-  value       = "${aws_api_gateway_stage.prod.invoke_url}/${aws_api_gateway_resource.dynamodb_manager.path_part}"
+  description = "Invoke URL for the ddbmanager route on the Prod stage"
+  value       = "${aws_apigatewayv2_stage.prod.invoke_url}/ddbmanager"
 }
