@@ -54,7 +54,15 @@ Steps for Power Tuning
 Steps for Load testing in Postman
 ----
 
-
+1. Create a New Collection "lt_collection" <br>
+2. Add new API request "ddb_api_request" <br>
+   a. URL as "https://xxx.execute-api.us-east-1.amazonaws.com/Prod/ddbmanager?tableName=ddb_table" <br>
+   b. click on Autharization tab and select auth type as bearer token. (get the bearer token calling Auth0 API) <br>
+   c. click save and test <br>
+4. Click the "..." next to the collection name and select "Run" from the dropdown — note that "Run" lives under the collection name, not inside the "POST New Request," which is a common spot   people mistakenly look for it. <br>
+5. Click "Performance," then under Load Profile select "Ramp up." <br>
+6. Set Virtual users to "10" and Test duration to "2 mins," then click "Run!" <br>
+7. this genrates a visual graph report.
 
 
 
