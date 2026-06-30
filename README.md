@@ -56,6 +56,10 @@ terraform apply
 }
 ```
 5. Once the execution finishes running, go to the "Execution input and output" tab, then select and copy the visualization link. <br>
+6. Open link in browser tab. here is sample report. <br>
+
+<img width="1776" height="871" alt="image" src="https://github.com/user-attachments/assets/2534f68d-887f-430e-9248-283fb431c428" />
+
 
 Steps for Load testing in Postman
 ----
