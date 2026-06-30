@@ -7,19 +7,19 @@ A step-by-step guide to building and fine-tuning a serverless HTTP API on AWS �
 
 Steps to Create resources
 ----
-1. create an account with http://auth0.com
-2. Create an API in Auth0 (http://auth0.com)
-   a. Go to Auth0 Dashboard → Applications → APIs → Create API
-   b. Set a name (e.g. DDB Operations API) and an Identifier (this becomes the audience, e.g. https://ddboperations.api) — note this down
-   c. Leave signing algorithm as RS256
-3. Get your Auth0 Domain (http://auth0.com)
-   a. Go to Applications → Applications → Default App (or create a new one)
-   b. Note your Domain (e.g. dev-xxxx.us.auth0.com) — you'll need this for the JWKS URI
-4. Update Issuer and Audience parameters in terraform/variables.tf
-5. Execute terraform commands to create resources
-   a. terraform init
-   b. terraform plan
-   c. terraform apply
+1. create an account with http://auth0.com <br>
+2. Create an API in Auth0 (http://auth0.com) <br>
+   a. Go to Auth0 Dashboard → Applications → APIs → Create API <br>
+   b. Set a name (e.g. DDB Operations API) and an Identifier (this becomes the audience, e.g. https://ddboperations.api) — note this down <br>
+   c. Leave signing algorithm as RS256 <br>
+3. Get your Auth0 Domain (http://auth0.com) <br>
+   a. Go to Applications → Applications → Default App (or create a new one) <br>
+   b. Note your Domain (e.g. dev-xxxx.us.auth0.com) — you'll need this for the JWKS URI <br>
+4. Update Issuer and Audience parameters in terraform/variables.tf <br>
+5. Execute terraform commands to create resources <br>
+   a. terraform init <br>
+   b. terraform plan <br>
+   c. terraform apply <br>
 
 Steps for Power Tuning
 ----
