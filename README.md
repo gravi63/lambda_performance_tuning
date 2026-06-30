@@ -5,7 +5,7 @@ A step-by-step guide to building and fine-tuning a serverless HTTP API on AWS â€
 
 <img width="801" height="341" alt="image" src="https://github.com/user-attachments/assets/921b0172-7574-4f4a-86ff-a082411fe133" />
 
-Steps to Create resources
+Steps to Create All Resources in the Architecture Diagram
 ----
 1. create an account with http://auth0.com <br>
 2. Create an API in Auth0 (http://auth0.com) <br>
@@ -49,7 +49,11 @@ Steps for Power Tuning
   "strategy": "cost"
 }
 ```
-Once the execution finishes running, go to the "Execution input and output" tab, then select and copy the visualization link. <br>
+5. Once the execution finishes running, go to the "Execution input and output" tab, then select and copy the visualization link. <br>
+
+Steps for Load testing in Postman
+----
+
 
 
 
