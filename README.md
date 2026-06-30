@@ -23,14 +23,17 @@ Steps to Create resources
 
 Steps for Power Tuning
 ----
-1. Execute terraform script at performance_tuning/serverless_repo_prov.tf
-2. This is Step Function "powertuning_xxx"
+1. Execute terraform script at performance_tuning/serverless_repo_prov.tf <br>
+   a. terraform init <br>
+   b. terraform plan <br>
+   c. terraform apply <br>
+2. This creates Step Function "powertuning_xxx" <br>
 
 <img width="731" height="121" alt="image" src="https://github.com/user-attachments/assets/31159707-d0be-4164-9edf-451ed38e283e" />
 
 
-To begin, select the powerTuningStateMachine and click "Start execution." 
-Next, retrieve your Lambda ARN and insert it into the JSON below, then copy the entire JSON object and paste it into the input field:
+3. To begin, select the powerTuningStateMachine and click "Start execution."  <br>
+4. Next, retrieve your Lambda ARN and insert it into the JSON below, then copy the entire JSON object and paste it into the input field: <br>
 
 ```json
 {
@@ -46,7 +49,7 @@ Next, retrieve your Lambda ARN and insert it into the JSON below, then copy the 
   "strategy": "cost"
 }
 ```
-Once the execution finishes running, go to the "Execution input and output" tab, then select and copy the visualization link.
+Once the execution finishes running, go to the "Execution input and output" tab, then select and copy the visualization link. <br>
 
 
 
