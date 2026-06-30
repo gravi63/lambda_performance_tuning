@@ -1,8 +1,7 @@
 variable "lambda_functions" {
   description = <<-EOT
     Map of Lambda functions to create. Map key = function name.
-    source_file should point to a single .py file in var.lambda_source_dir,
-    e.g. "hello_world.py" -> lambda_src/hello_world.py
+    source_file should point to a single .py file in var.lambda_source_dir.
   EOT
   type = map(object({
     source_file = string    # e.g. "hello_world.py"
@@ -30,13 +29,6 @@ variable "lambda_functions" {
       source_file = "ddb_list_records.py"
       handler     = "ddb_list_records.lambda_handler"
     }
-    # Add more functions here as you drop more .py files into lambda_source_dir, e.g.:
-    # "another-function" = {
-    #   source_file = "another_function.py"
-    #   handler     = "another_function.lambda_handler"
-    #   timeout     = 60
-    #   environment = { LOG_LEVEL = "INFO" }
-    # }
   }
 }
 
@@ -44,4 +36,16 @@ variable "lambda_source_dir" {
   description = "Directory containing the individual .py files referenced in lambda_functions"
   type        = string
   default     = "./lambda_src"
+}
+
+variable "auth0_issuer" {
+  type = string
+  description = "Issuer Auth0 domain name"
+  default = "https://dev-nspai7uahqa8gj5g.us.auth0.com/"
+}
+
+variable "auth0_audience" {
+  type = list
+  description = "API Identifier you set in Auth0 dashboard"
+  default = ["https://ddboperations.api"]
 }

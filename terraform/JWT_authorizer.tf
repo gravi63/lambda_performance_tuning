@@ -6,8 +6,8 @@ resource "aws_apigatewayv2_authorizer" "auth0" {
 
   jwt_configuration {
     # Auth0 domain — replace with your actual domain
-    issuer   = "https://dev-nspai7uahqa8gj5g.us.auth0.com/"
+    issuer   = "${var.auth0_issuer}"    
     # API Identifier you set in Auth0 dashboard
-    audience = ["https://ddboperations.api"]
+    audience = "${var.auth0_audience}"
   }
 }
