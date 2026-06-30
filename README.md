@@ -1,4 +1,5 @@
-# lambda_performance_tuning
+lambda_performance_tuning
+----
 
 A step-by-step guide to building and fine-tuning a serverless HTTP API on AWS â€” one that's ready for real-world use. It covers routing different types of requests through a multiple Python functions, keeping things secure, and using load testing data to make the setup faster and cheaper.
 
@@ -6,6 +7,10 @@ A step-by-step guide to building and fine-tuning a serverless HTTP API on AWS â€
 
 
 
+Steps for Power Tuning
+----
+1. Execute terraform script at performance_tuning/serverless_repo_prov.tf
+2. This is Step Function "powertuning_xxx"
 
 <img width="731" height="121" alt="image" src="https://github.com/user-attachments/assets/31159707-d0be-4164-9edf-451ed38e283e" />
 
