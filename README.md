@@ -17,16 +17,22 @@ Steps to Create All Resources in the Architecture Diagram
    b. Note your Domain (e.g. dev-xxxx.us.auth0.com) — you'll need this for the JWKS URI <br>
 4. Update Issuer and Audience parameters in terraform/variables.tf <br>
 5. Execute terraform commands to create resources <br>
-   a. terraform init <br>
-   b. terraform plan <br>
-   c. terraform apply <br>
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
 
 Steps for Power Tuning
 ----
 1. Execute terraform script at performance_tuning/serverless_repo_prov.tf <br>
-   a. terraform init <br>
-   b. terraform plan <br>
-   c. terraform apply <br>
+```bash
+cd performance_tuning
+terraform init
+terraform plan
+terraform apply
+```
 2. This creates Step Function "powertuning_xxx" <br>
 
 <img width="731" height="121" alt="image" src="https://github.com/user-attachments/assets/31159707-d0be-4164-9edf-451ed38e283e" />
@@ -58,11 +64,24 @@ Steps for Load testing in Postman
 2. Add new API request "ddb_api_request" <br>
    a. URL as "https://xxx.execute-api.us-east-1.amazonaws.com/Prod/ddbmanager?tableName=ddb_table" <br>
    b. click on Autharization tab and select auth type as bearer token. (get the bearer token calling Auth0 API) <br>
+   ```bash
+   curl --request POST \
+     --url https://xxxxx.us.auth0.com/oauth/token \
+     --header 'content-type: application/json' \
+     --data '{
+       "client_id":"xxxxx",
+       "client_secret":"xxxxxx",
+       "audience":"https://ddboperations.api",
+       "grant_type":"client_credentials"
+     }'
+   ```
    c. click save and test <br>
 4. Click the "..." next to the collection name and select "Run" from the dropdown — note that "Run" lives under the collection name, not inside the "POST New Request," which is a common spot   people mistakenly look for it. <br>
 5. Click "Performance," then under Load Profile select "Ramp up." <br>
 6. Set Virtual users to "10" and Test duration to "2 mins," then click "Run!" <br>
-7. this genrates a visual graph report.
+7. this genrates a visual graph report. here is sample report. <br>
+   <img width="1565" height="661" alt="image" src="https://github.com/user-attachments/assets/32d14b6c-c1f4-4f23-9701-a73fc79346d9" />
+
 
 
 
