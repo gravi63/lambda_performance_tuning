@@ -41,7 +41,6 @@ variable "lambda_source_dir" {
 variable "auth0_issuer" {
   type = string
   description = "Issuer Auth0 domain name"
-  default = "https://dev-nspai7uahqa8gj5g.us.auth0.com/"
 }
 
 variable "auth0_audience" {
